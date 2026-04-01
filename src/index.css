@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= BASE ================= */
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: radial-gradient(circle at 50% 30%, #0b1117, #05080c 80%);
+  color: #ffffff;
+  cursor: none;
+  overflow-x: hidden;
+}
+
+/* ================= AURORA BACKGROUND ================= */
+@keyframes auroraMove {
+  0% { transform: translate(0%, 0%) scale(1); }
+  50% { transform: translate(10%, -10%) scale(1.2); }
+  100% { transform: translate(-10%, 10%) scale(1); }
+}
+
+.aurora-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.aurora-bg::before,
+.aurora-bg::after {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  filter: blur(140px);
+  animation: auroraMove 18s ease-in-out infinite;
+}
+
+.aurora-bg::before {
+  background: radial-gradient(circle, rgba(0,212,170,0.25), transparent 70%);
+  top: 10%;
+  left: 20%;
+}
+
+.aurora-bg::after {
+  background: radial-gradient(circle, rgba(0,168,255,0.2), transparent 70%);
+  bottom: 10%;
+  right: 20%;
+  animation-delay: 8s;
+}
+
+/* ================= NOISE ================= */
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+}
+
+/* ================= CURSOR ================= */
+.cursor {
+  width: 10px;
+  height: 10px;
+  background: #00d4aa;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: difference;
+  transition: transform 0.15s ease;
+}
+
+.cursor-follower {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid rgba(0,212,170,0.5);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99998;
+  transition: all 0.08s ease;
+}
+
+/* ================= SCROLLBAR ================= */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #00d4aa;
+  border-radius: 2px;
+}
+
+/* ================= TEXT ================= */
+.gradient-text {
+  background: linear-gradient(135deg, #00d4aa, #00a8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-text {
+  text-shadow: 0 0 30px rgba(0,212,170,0.5);
+}
+
+/* ================= NAV ================= */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #00d4aa;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ================= CARD ================= */
+.card-hover {
+  transition: all 0.35s ease;
+}
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 80px rgba(0,212,170,0.15);
+}
+
+/* ================= PROJECT CARD ================= */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+.project-card img {
+  transition: transform 0.5s ease;
+}
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.project-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(8,12,16,0.95), transparent);
+  opacity: 0;
+  transition: 0.4s;
+}
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.project-card .info {
+  position: absolute;
+  bottom: 0;
+  padding: 1.5rem;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.4s;
+}
+.project-card:hover .info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.animate-fadeUp {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-zoomIn {
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* ================= INPUT ================= */
+.form-input {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: all 0.3s ease;
+}
+.form-input:focus {
+  border-color: rgba(0,212,170,0.5);
+  background: rgba(0,212,170,0.04);
+  box-shadow: 0 0 0 3px rgba(0,212,170,0.08);
+}
+
+/* ================= EXTRA EFFECT ================= */
+
+/* Glow hover follow (simple illusion) */
+.glow-hover:hover {
+  box-shadow: 0 0 40px rgba(0,212,170,0.3);
+}
+
+/* Soft divider */
+.section-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4aa, #00a8ff);
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: rgba(0,212,170,0.3);
+}

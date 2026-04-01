@@ -174,7 +174,7 @@ export default function Hero() {
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
                    <div className="w-28 h-28 rounded-full border-2 border-[#00d4aa]/50 overflow-hidden mb-4">
  <img
-  src="/hero2.jpeg"
+  src="/hero3.jpeg"
   alt="Fachry Ahmad"
   className="absolute inset-0 w-full h-full object-cover"
 />

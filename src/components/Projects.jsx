@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FiExternalLink, FiGithub } from 'react-icons/fi'
 
 const projectsData = [
-  { id: 1, title: "CODING LARAVEL", desc: "Aplikasi fullstack Laravel.", type: "project", image: "/project1.png", github: "https://github.com", action: "github" },
+  { id: 1, title: "CODING LARAVEL", desc: "Aplikasi fullstack Laravel.", type: "project", image: "/project1.png", github: "https://github.com/fheyri/laravel-mexi.git", action: "github" },
   { id: 2, title: "Cybersecurity Certificate", desc: "Fundamental cybersecurity.", type: "certificate", image: "/sertifikat8.jpeg", action: "modal" },
   { id: 3, title: "Kelas Engineering", desc: "Program IDN Mengajar.", type: "certificate", image: "/idn.png", action: "modal" },
   { id: 4, title: "Sistem Operasi Dasar", desc: "Linux & OS basic.", type: "certificate", image: "/os.png", action: "modal" },

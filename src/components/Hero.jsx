@@ -190,7 +190,6 @@ export default function Hero() {
                         <div className="w-2 h-2 rounded-full bg-[#00d4aa]" />
                         <span className="text-white/60 text-xs">Online</span>
                       </div>
-                      <span className="text-[#00d4aa] text-xs font-mono">SYS: ACTIVE</span>
                     </div>
                   </div>
                 </div>

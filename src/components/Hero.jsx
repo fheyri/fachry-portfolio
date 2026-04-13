@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-scroll'
 import { FiGithub, FiLinkedin, FiInstagram, FiArrowDown } from 'react-icons/fi'
 
-const roles = ['System Engineer', 'Network Architect', 'Infrastructure Specialist', 'Tech Problem Solver']
+const roles = ['Frontend Developer', 'UI / UX Enthusiast', 'React Developer', 'Web Builder']
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0)
@@ -106,8 +106,8 @@ export default function Hero() {
 
               {/* Bio */}
               <p className="text-white/50 text-base leading-relaxed max-w-md mb-10">
-                Merancang dan mengelola infrastruktur digital yang handal, scalable, dan aman. 
-                Saya mengubah kompleksitas sistem menjadi solusi yang elegan dan efisien.
+                Membangun antarmuka web yang indah, responsif, dan berperforma tinggi.
+                Saya mengubah desain menjadi pengalaman digital yang berkesan dan intuitif.
               </p>
 
               {/* Social Links */}
@@ -157,9 +157,8 @@ export default function Hero() {
               <div className="relative float-animation">
                 {/* Main card */}
                 <div className="relative w-[300px] h-[420px] rounded-3xl overflow-hidden border border-white/10 glow">
-                  {/* Photo placeholder — ganti dengan foto asli */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#0d2a2a] via-[#0f1f2e] to-[#080c10]" />
-                  
+
                   {/* Scan line effect */}
                   <div className="absolute inset-0 overflow-hidden opacity-30">
                     <div className="scan-line absolute w-full h-1 bg-gradient-to-r from-transparent via-[#00d4aa] to-transparent" />
@@ -170,17 +169,17 @@ export default function Hero() {
                   <div className="absolute top-12 right-12 w-16 h-16 rounded-full border border-[#00d4aa]/10" />
                   <div className="absolute bottom-24 left-6 w-8 h-8 rounded-full bg-[#00d4aa]/20" />
 
-                  {/* Avatar placeholder */}
+                  {/* Avatar */}
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
-                   <div className="w-28 h-28 rounded-full border-2 border-[#00d4aa]/50 overflow-hidden mb-4">
- <img
-  src="/hero3.png"
-  alt="Fachry Ahmad"
-  className="absolute inset-0 w-full h-full object-cover"
-/>
-</div>
+                    <div className="w-28 h-28 rounded-full border-2 border-[#00d4aa]/50 overflow-hidden mb-4">
+                      <img
+                        src="/hero2.jpeg"
+                        alt="Fachry Ahmad"
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                    </div>
                     <p className="text-white font-['Syne'] font-bold text-xl">Fachry Ahmad</p>
-                    <p className="text-[#00d4aa] text-sm mt-1">System Engineer</p>
+                    <p className="text-[#00d4aa] text-sm mt-1">Frontend Developer</p>
                   </div>
 
                   {/* Bottom bar */}
@@ -196,17 +195,17 @@ export default function Hero() {
 
                 {/* Floating badges */}
                 <div className="absolute -top-4 -right-4 bg-[#0d1a14] border border-[#00d4aa]/30 rounded-2xl px-4 py-2 flex items-center gap-2">
-                  <span className="text-[#00d4aa] text-lg">⚙️</span>
+                  <span className="text-[#00d4aa] text-lg">⚛️</span>
                   <div>
-                    <p className="text-white text-xs font-semibold">System</p>
-                    <p className="text-white/40 text-xs">Engineer</p>
+                    <p className="text-white text-xs font-semibold">React</p>
+                    <p className="text-white/40 text-xs">Developer</p>
                   </div>
                 </div>
                 <div className="absolute -bottom-4 -left-4 bg-[#0d1a14] border border-[#00a8ff]/30 rounded-2xl px-4 py-2 flex items-center gap-2">
-                  <span className="text-[#00a8ff] text-lg">🔧</span>
+                  <span className="text-[#00a8ff] text-lg">🎨</span>
                   <div>
-                    <p className="text-white text-xs font-semibold">Infrastructure</p>
-                    <p className="text-white/40 text-xs">Specialist</p>
+                    <p className="text-white text-xs font-semibold">UI / UX</p>
+                    <p className="text-white/40 text-xs">Enthusiast</p>
                   </div>
                 </div>
               </div>

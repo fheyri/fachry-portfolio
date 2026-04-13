@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: '3+', label: 'proyek konstruksi' },
+  { value: '3+', label: 'proyek web & aplikasi' },
   { value: '1+', label: 'pengalaman di luar sekolah' },
   { value: '7+', label: 'sertifikat' },
 ];
@@ -164,7 +164,7 @@ function LanyardCard() {
         {/* Name */}
         <div style={{ textAlign: 'center', padding: '0 22px 14px' }}>
           <p style={{ color: '#fff', fontWeight: 700, fontSize: '17px', letterSpacing: '0.5px', margin: 0 }}>Fachry Ahmad</p>
-          <p style={{ color: 'rgba(0,212,170,0.75)', fontSize: '10px', letterSpacing: '2.5px', textTransform: 'uppercase', margin: '5px 0 0' }}>QS Engineer</p>
+          <p style={{ color: 'rgba(0,212,170,0.75)', fontSize: '10px', letterSpacing: '2.5px', textTransform: 'uppercase', margin: '5px 0 0' }}>Frontend Developer</p>
         </div>
 
         {/* Divider */}
@@ -174,7 +174,7 @@ function LanyardCard() {
         <div style={{ padding: '14px 22px' }}>
           {[
             { label: 'Status', value: '● Active', color: '#00d4aa' },
-            { label: 'Specialization', value: 'Cost Estimating', color: 'rgba(255,255,255,0.55)' },
+            { label: 'Specialization', value: 'UI / UX Development', color: 'rgba(255,255,255,0.55)' },
             { label: 'Certificates', value: '7+ sertifikat', color: 'rgba(255,255,255,0.55)' },
             { label: 'Projects', value: '3+ selesai', color: 'rgba(255,255,255,0.55)' },
           ].map(({ label, value, color }) => (
@@ -192,7 +192,7 @@ function LanyardCard() {
               <div key={i} style={{ width: w * 2 + 'px', height: '26px', background: '#00d4aa', borderRadius: '1px' }} />
             ))}
           </div>
-          <span style={{ color: 'rgba(255,255,255,0.08)', fontSize: '8px', letterSpacing: '3px' }}>FA-2025-QS-001</span>
+          <span style={{ color: 'rgba(255,255,255,0.08)', fontSize: '8px', letterSpacing: '3px' }}>FA-2025-FE-001</span>
         </div>
       </div>
     </div>
@@ -232,25 +232,25 @@ export default function About() {
             </div>
 
             <h2 className="font-['Syne'] font-extrabold text-4xl md:text-5xl leading-tight mb-4">
-              Menghitung Biaya dengan{' '}
-              <span className="gradient-text">Presisi & Akurasi</span>
+              Membangun Antarmuka dengan{' '}
+              <span className="gradient-text">Kreativitas & Presisi</span>
             </h2>
 
             <p className="text-white/40 text-base italic mb-6 border-l-2 border-[#00d4aa]/40 pl-4">
-              Perpaduan analisis biaya, estimasi kuantitas, dan pengendalian proyek konstruksi.
+              Perpaduan desain UI yang estetis, kode yang bersih, dan pengalaman pengguna yang intuitif.
             </p>
 
             <div className="space-y-4 text-white/60 leading-relaxed mb-10">
               <p>
-                Perjalanan saya di dunia konstruksi dimulai dari ketertarikan mendalam terhadap
-                bagaimana sebuah proyek direncanakan secara finansial. Sebagai QS Engineer,
-                saya berfokus pada estimasi biaya, analisis bill of quantities, dan
-                pengendalian anggaran proyek secara akurat.
+                Perjalanan saya di dunia web dimulai dari ketertarikan mendalam terhadap
+                bagaimana sebuah antarmuka dapat memberikan pengalaman yang luar biasa bagi pengguna.
+                Sebagai Frontend Developer, saya berfokus pada membangun tampilan yang responsif,
+                interaktif, dan performant menggunakan teknologi modern.
               </p>
               <p>
-                Saya memiliki pengalaman dalam menyusun RAB, menghitung volume pekerjaan,
-                dan menganalisis harga satuan. Bagi saya, estimasi yang baik adalah fondasi
-                dari proyek konstruksi yang sukses dan tepat anggaran.
+                Saya memiliki pengalaman dalam mengembangkan komponen UI, mengimplementasikan
+                desain pixel-perfect, dan mengoptimalkan performa aplikasi web. Bagi saya,
+                kode yang baik adalah fondasi dari produk digital yang sukses dan berkesan.
               </p>
             </div>
 
@@ -266,7 +266,7 @@ export default function About() {
 
             {/* Download CV */}
             <a
-              href="/cv-fachry-ahmad-qs.pdf" target="_blank" rel="noopener noreferrer"
+              href="/cv-front-end.pdf" target="_blank" rel="noopener noreferrer"
               download
               className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full border border-[#00d4aa]/30 text-[#00d4aa] font-medium hover:bg-[#00d4aa]/10 transition-all duration-300 group"
             >

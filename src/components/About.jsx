@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 const stats = [
-  { value: '3+', label: 'project selesai' },
+  { value: '3+', label: 'proyek konstruksi' },
   { value: '1+', label: 'pengalaman di luar sekolah' },
   { value: '7+', label: 'sertifikat' },
 ];
@@ -164,7 +164,7 @@ function LanyardCard() {
         {/* Name */}
         <div style={{ textAlign: 'center', padding: '0 22px 14px' }}>
           <p style={{ color: '#fff', fontWeight: 700, fontSize: '17px', letterSpacing: '0.5px', margin: 0 }}>Fachry Ahmad</p>
-          <p style={{ color: 'rgba(0,212,170,0.75)', fontSize: '10px', letterSpacing: '2.5px', textTransform: 'uppercase', margin: '5px 0 0' }}>System Engineer</p>
+          <p style={{ color: 'rgba(0,212,170,0.75)', fontSize: '10px', letterSpacing: '2.5px', textTransform: 'uppercase', margin: '5px 0 0' }}>QS Engineer</p>
         </div>
 
         {/* Divider */}
@@ -174,7 +174,7 @@ function LanyardCard() {
         <div style={{ padding: '14px 22px' }}>
           {[
             { label: 'Status', value: '● Active', color: '#00d4aa' },
-            { label: 'Experience', value: '1+ tahun', color: 'rgba(255,255,255,0.55)' },
+            { label: 'Specialization', value: 'Cost Estimating', color: 'rgba(255,255,255,0.55)' },
             { label: 'Certificates', value: '7+ sertifikat', color: 'rgba(255,255,255,0.55)' },
             { label: 'Projects', value: '3+ selesai', color: 'rgba(255,255,255,0.55)' },
           ].map(({ label, value, color }) => (
@@ -192,7 +192,7 @@ function LanyardCard() {
               <div key={i} style={{ width: w * 2 + 'px', height: '26px', background: '#00d4aa', borderRadius: '1px' }} />
             ))}
           </div>
-          <span style={{ color: 'rgba(255,255,255,0.08)', fontSize: '8px', letterSpacing: '3px' }}>FA-2025-SE-001</span>
+          <span style={{ color: 'rgba(255,255,255,0.08)', fontSize: '8px', letterSpacing: '3px' }}>FA-2025-QS-001</span>
         </div>
       </div>
     </div>
@@ -232,25 +232,25 @@ export default function About() {
             </div>
 
             <h2 className="font-['Syne'] font-extrabold text-4xl md:text-5xl leading-tight mb-4">
-              Membangun Sistem yang{' '}
-              <span className="gradient-text">Andal & Skalabel</span>
+              Menghitung Biaya dengan{' '}
+              <span className="gradient-text">Presisi & Akurasi</span>
             </h2>
 
             <p className="text-white/40 text-base italic mb-6 border-l-2 border-[#00d4aa]/40 pl-4">
-              Perpaduan logika teknis dan visi arsitektur sistem.
+              Perpaduan analisis biaya, estimasi kuantitas, dan pengendalian proyek konstruksi.
             </p>
 
             <div className="space-y-4 text-white/60 leading-relaxed mb-10">
               <p>
-                Perjalanan saya di dunia teknologi dimulai dengan rasa ingin tahu yang mendalam
-                tentang bagaimana sistem bekerja di balik layar. Sebagai seorang System Engineer,
-                saya berfokus pada perancangan, implementasi, dan pengelolaan infrastruktur IT
-                yang efisien dan handal.
+                Perjalanan saya di dunia konstruksi dimulai dari ketertarikan mendalam terhadap
+                bagaimana sebuah proyek direncanakan secara finansial. Sebagai QS Engineer,
+                saya berfokus pada estimasi biaya, analisis bill of quantities, dan
+                pengendalian anggaran proyek secara akurat.
               </p>
               <p>
-                Saya memiliki pengalaman dalam mengelola server, jaringan, dan cloud infrastructure.
-                Bagi saya, sebuah sistem yang baik adalah sistem yang tidak terlihat — berjalan
-                dengan sempurna tanpa gangguan, 24/7.
+                Saya memiliki pengalaman dalam menyusun RAB, menghitung volume pekerjaan,
+                dan menganalisis harga satuan. Bagi saya, estimasi yang baik adalah fondasi
+                dari proyek konstruksi yang sukses dan tepat anggaran.
               </p>
             </div>
 
@@ -266,7 +266,7 @@ export default function About() {
 
             {/* Download CV */}
             <a
-              href="/CV-Fachry-Ahmad.pdf"
+              href="/cv-fachry-ahmad-qs.pdf" target="_blank" rel="noopener noreferrer"
               download
               className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full border border-[#00d4aa]/30 text-[#00d4aa] font-medium hover:bg-[#00d4aa]/10 transition-all duration-300 group"
             >

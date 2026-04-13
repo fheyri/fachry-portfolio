@@ -3,53 +3,63 @@ import { useEffect, useRef, useState } from "react";
 
 const skillCategories = [
   {
-    title: "Infrastructure & OS",
+    title: "Quality Assurance & Testing",
     color: "#00d4aa",
     skills: [
-      { name: "Linux / Ubuntu", icon: "🐧", level: 90 },
-      { name: "Windows Server", icon: "🪟", level: 85 },
-      { name: "VMware", icon: "💠", level: 80 },
-      { name: "Docker", icon: "🐳", level: 75 },
+      { name: "Manual Testing", icon: "🧪", level: 85 },
+      { name: "Test Case Writing", icon: "📝", level: 80 },
+      { name: "Bug Reporting & Tracking", icon: "🐞", level: 85 },
+      { name: "Debugging & Troubleshooting", icon: "🛠️", level: 85 },
     ],
   },
   {
-    title: "Cloud & Networking",
+    title: "Web Development",
     color: "#00a8ff",
     skills: [
-      { name: "AWS", icon: "☁️", level: 80 },
-      { name: "Cisco / Networking", icon: "🔗", level: 85 },
-      { name: "Nginx / Apache", icon: "⚡", level: 80 },
-      { name: "Kubernetes", icon: "☸️", level: 70 },
-    ],
-  },
-  {
-    title: "Programming",
-    color: "#f59e0b",
-    skills: [
-      { name: "JavaScript", icon: "🟨", level: 85 },
-      { name: "PHP", icon: "🐘", level: 80 },
-      { name: "Node.js", icon: "🟢", level: 80 },
+      { name: "HTML, CSS, JavaScript", icon: "🌐", level: 85 },
+      { name: "React.js", icon: "⚛️", level: 80 },
+      { name: "Laravel", icon: "🔥", level: 75 },
       { name: "MySQL", icon: "🗄️", level: 85 },
     ],
   },
   {
-    title: "Design & Creative",
+    title: "API & Tools",
+    color: "#f59e0b",
+    skills: [
+      { name: "Postman (API Testing)", icon: "📮", level: 80 },
+      { name: "Git / GitHub", icon: "🔀", level: 90 },
+      { name: "Chrome DevTools", icon: "🧰", level: 85 },
+      { name: "Basic Automation Testing", icon: "🤖", level: 70 },
+    ],
+  },
+  {
+    title: "Infrastructure & System",
     color: "#ec4899",
     skills: [
-      { name: "Figma (UI/UX)", icon: "🎨", level: 80 },
-      { name: "Adobe Photoshop", icon: "🖌️", level: 75 },
-      { name: "Video Editing", icon: "🎬", level: 75 },
-      { name: "Content Design", icon: "✨", level: 70 },
+      { name: "Linux / Ubuntu", icon: "🐧", level: 90 },
+      { name: "Windows Server", icon: "🪟", level: 85 },
+      { name: "VMware / Virtualization", icon: "💠", level: 80 },
+      { name: "Docker (Basic)", icon: "🐳", level: 75 },
+    ],
+  },
+  {
+    title: "Networking",
+    color: "#ef4444",
+    skills: [
+      { name: "Cisco / Networking", icon: "🔗", level: 85 },
+      { name: "Network Infrastructure", icon: "🌐", level: 85 },
+      { name: "Nginx / Apache", icon: "⚡", level: 80 },
+      { name: "Troubleshooting Network", icon: "🧰", level: 85 },
     ],
   },
   {
     title: "Network Cabling",
-    color: "#ef4444",
+    color: "#22c55e",
     skills: [
       { name: "LAN Cable Crimping", icon: "🔌", level: 90 },
       { name: "Fiber Optic (FTTH)", icon: "🌐", level: 80 },
       { name: "Network Installation", icon: "🛠️", level: 85 },
-      { name: "Troubleshooting Cable", icon: "🧰", level: 85 },
+      { name: "Cable Troubleshooting", icon: "🧰", level: 85 },
     ],
   },
   {
@@ -59,7 +69,17 @@ const skillCategories = [
       { name: "Grafana", icon: "📊", level: 80 },
       { name: "Prometheus", icon: "🔥", level: 75 },
       { name: "Ansible", icon: "🤖", level: 75 },
-      { name: "Git / GitHub", icon: "🔀", level: 90 },
+      { name: "Git Workflow", icon: "🔀", level: 90 },
+    ],
+  },
+  {
+    title: "Soft Skills",
+    color: "#f43f5e",
+    skills: [
+      { name: "Attention to Detail", icon: "🔍", level: 90 },
+      { name: "Problem Solving", icon: "🧠", level: 85 },
+      { name: "Analytical Thinking", icon: "📈", level: 85 },
+      { name: "Team Collaboration", icon: "🤝", level: 90 },
     ],
   },
 ];

@@ -6,11 +6,12 @@ const projectsData = [
   { id: 2, title: "Cybersecurity Certificate", desc: "Fundamental cybersecurity.", type: "certificate", image: "/sertifikat8.jpeg", action: "modal" },
   { id: 3, title: "Kelas Engineering", desc: "Program IDN Mengajar.", type: "certificate", image: "/idn.png", action: "modal" },
   { id: 4, title: "Sistem Operasi Dasar", desc: "Linux & OS basic.", type: "certificate", image: "/os.png", action: "modal" },
-  { id: 5, title: "Game Deployment", desc: "Mobile app deployment.", type: "certificate", image: "/sulo.jpeg", action: "modal" },
+  { id: 5, title: "Digital Officer With AI ", desc: "Pengembangan Proyek AI pada Data Dan Document.", type: "certificate", image: "/digiup.jpeg", action: "modal" },
   { id: 6, title: "Frontend Deployment", desc: "NextJS basic.", type: "certificate", image: "/itho.png", action: "modal" },
   { id: 7, title: "Cabling", desc: "FO & LAN maintenance.", type: "certificate", image: "/cabling.png", action: "modal" },
   { id: 8, title: "PKK Project", desc: "Pemasangan CCTV dan Instalasi Jaringan.", type: "project", image: "/pkk2.png", action: "modal", portrait: true },
-  { id: 9, title: "UI/UX Design", desc: "Figma UI Design.", type: "project", image: "/figma.png", figma: "https://www.figma.com/design/cArQgTjlsAFJRcdlXfbuCJ/UI-UX-PROJECT", action: "figma" }
+  { id: 9, title: "UI/UX Design", desc: "Figma UI Design.", type: "project", image: "/figma.png", figma: "https://www.figma.com/design/cArQgTjlsAFJRcdlXfbuCJ/UI-UX-PROJECT", action: "figma" },
+  { id: 10, title: "CODING LARAVEL", desc: "Aplikasi fullstack Laravel.", type: "project", image: "/hotek.png", action: "modal" },
 ]
 
 export default function Projects() {
@@ -72,7 +73,9 @@ export default function Projects() {
           {filtered.map((item, i) => (
             <div
               key={item.id}
-              className="animate-fadeUp"
+              className={`animate-fadeUp ${
+                item.id === 10 ? 'md:col-start-2' : ''
+              }`}
               style={{ animationDelay: `${i * 0.12}s` }}
             >
               <Card item={item} openImage={setSelectedItem} />
@@ -82,7 +85,7 @@ export default function Projects() {
 
       </div>
 
-      {/* MODAL — portrait aware */}
+      {/* MODAL */}
       {selectedItem && (
         <div
           className="fixed inset-0 bg-black/85 backdrop-blur-md flex items-center justify-center z-50 p-6 animate-fadeIn"
@@ -91,27 +94,26 @@ export default function Projects() {
           <div
             className={`relative animate-zoomIn ${
               selectedItem.portrait
-                ? 'w-[360px] max-w-full'   // ← portrait: narrow & tall
-                : 'w-[900px] max-w-full'   // ← landscape: wide
+                ? 'w-[360px] max-w-full'
+                : 'w-[900px] max-w-full'
             }`}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* laptop frame atas */}
             <div className="bg-[#1a1a1a] rounded-t-xl p-3 border border-gray-700">
               <div className="w-2 h-2 bg-gray-500 rounded-full mx-auto mb-2" />
               <div className="bg-black rounded-lg overflow-hidden">
                 <img
                   src={selectedItem.image}
+                  alt={selectedItem.title}
                   className={`w-full object-contain ${
                     selectedItem.portrait ? 'max-h-[75vh]' : ''
                   }`}
                 />
               </div>
             </div>
-            {/* laptop frame bawah */}
+
             <div className="h-4 bg-gray-700 rounded-b-xl" />
 
-            {/* tombol close */}
             <button
               onClick={() => setSelectedItem(null)}
               className="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-[#00d4aa] text-black font-bold text-sm hover:scale-110 transition flex items-center justify-center shadow-lg"
@@ -140,13 +142,11 @@ function Card({ item, openImage }) {
         hover:border-[#00d4aa]/40 transition-all duration-300
         hover:-translate-y-2 hover:shadow-[0_10px_40px_rgba(0,212,170,0.2)]"
     >
-      {/* SHIMMER saat hover */}
       <div className="absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500
         bg-gradient-to-r from-transparent via-white/5 to-transparent
         -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%]
         transition-transform duration-700 pointer-events-none" />
 
-      {/* IMAGE */}
       <div className="w-full h-[230px] overflow-hidden">
         <img
           src={item.image}
@@ -155,15 +155,12 @@ function Card({ item, openImage }) {
         />
       </div>
 
-      {/* GLOW border animasi */}
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500
         shadow-[inset_0_0_20px_rgba(0,212,170,0.08)] pointer-events-none" />
 
-      {/* OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent
         group-hover:from-black/90 transition-all duration-300" />
 
-      {/* CONTENT */}
       <div className="absolute bottom-0 p-5 z-10 w-full
         translate-y-1 group-hover:translate-y-0 transition-transform duration-300">
         <h3 className="text-white font-bold text-lg leading-tight">
@@ -175,7 +172,6 @@ function Card({ item, openImage }) {
           {item.desc}
         </p>
 
-        {/* ACTION */}
         <div className="mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
           {item.action === 'github' && (
             <span className="flex items-center gap-2 text-white/70 text-sm">
@@ -195,7 +191,6 @@ function Card({ item, openImage }) {
         </div>
       </div>
 
-      {/* BADGE portrait indicator (opsional) */}
       {item.portrait && (
         <div className="absolute top-3 right-3 z-20 bg-[#00d4aa]/20 border border-[#00d4aa]/40
           text-[#00d4aa] text-[10px] px-2 py-0.5 rounded-full backdrop-blur">

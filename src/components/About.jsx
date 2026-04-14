@@ -266,7 +266,7 @@ export default function About() {
 
             {/* Download CV */}
             <a
-              href="/cv-front-end.pdf" target="_blank" rel="noopener noreferrer"
+              href="/cv-fachry-ahmad-front-end.pdf" target="_blank" rel="noopener noreferrer"
               download
               className="inline-flex items-center gap-3 px-7 py-3.5 rounded-full border border-[#00d4aa]/30 text-[#00d4aa] font-medium hover:bg-[#00d4aa]/10 transition-all duration-300 group"
             >

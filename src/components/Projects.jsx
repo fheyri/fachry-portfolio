@@ -10,8 +10,7 @@ const projectsData = [
   { id: 6, title: "Frontend Deployment", desc: "NextJS basic.", type: "certificate", image: "/itho.png", action: "modal" },
   { id: 7, title: "Cabling", desc: "FO & LAN maintenance.", type: "certificate", image: "/cabling.png", action: "modal" },
   { id: 8, title: "PKK Project", desc: "Pemasangan CCTV dan Instalasi Jaringan.", type: "project", image: "/pkk2.png", action: "modal", portrait: true },
-  { id: 9, title: "UI/UX Design", desc: "Figma UI Design.", type: "project", image: "/figma.png", figma: "https://www.figma.com/design/cArQgTjlsAFJRcdlXfbuCJ/UI-UX-PROJECT", action: "figma" },
-  { id: 10, title: "CODING LARAVEL", desc: "Aplikasi fullstack Laravel.", type: "project", image: "/hotek.png", action: "modal" },
+  { id: 9, title: "CODING LARAVEL", desc: "Aplikasi fullstack Laravel.", type: "project", image: "/hotek.png", action: "modal" },
 ]
 
 export default function Projects() {
